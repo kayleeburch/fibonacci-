@@ -6,7 +6,6 @@ def fibonacci(n):
     adding = firstNum + secondNum
     firstNum = secondNum
     secondNum = adding
-    # print(adding, firstNum, secondNum)
   return firstNum
 
 
