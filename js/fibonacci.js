@@ -1,12 +1,15 @@
+//0 1 1 2 3 5 8 13 21 34 55
 const fibonacci = (num) => {
-        let arr = [0,1]
-        for(let i = 0; i < num - 1; i++) {
-            arr.push(arr[i] + arr[i + 1])
-        }
-        return arr[arr.length - 1]
+    let firstNum = 0
+    let secondNum = 1
+    if(num === 0) return num;
+    for(let i = 1; i < num; i++) {
+        let result = firstNum + secondNum
+        firstNum = secondNum
+        secondNum = result
     }
-    
-    console.log(fibonacci(7))
+    return secondNum;
+}
 
 
-module.exports = {fibonacci}
+module.exports.fibonacci = fibonacci;
